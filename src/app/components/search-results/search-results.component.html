@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  <h2>Search Results for "{{ searchTerm }}"</h2>
+
+  <div *ngIf="totalResults > 0">
+    <p class="results-count">{{ totalResults }} results found</p>
+    <div class="list-group">
+      <div class="list-item mb-4" *ngFor="let company of paginatedCompanies">
+        <a [routerLink]="['/company', company.company_number]">{{ company.title }}</a>
+        <div>{{ company.description }}</div>
+        <div *ngIf="company.address">
+          {{ company.address_snippet || '' }},
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="totalResults === 0">
+    <p>No results found for "{{ searchTerm }}".</p>
+  </div>
+
+  <div class="pagination-controls mt-3">
+    <button class="btn btn-secondary" (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+    <span class="mx-2">Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn btn-secondary" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>

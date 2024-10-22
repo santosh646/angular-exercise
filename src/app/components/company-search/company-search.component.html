@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Company Search</h2>
+  <div class="input-group">
+    <input
+      [(ngModel)]="searchTerm"
+      required
+      type="text"
+      class="form-control"
+      placeholder="Enter company name or number"
+      (keyup.enter)="searchCompanies()"
+    />
+    <button class="btn btn-secondary" (click)="searchCompanies()">Search</button>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>

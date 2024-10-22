@@ -1,0 +1,28 @@
+.container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p.results-count {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.list-group {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+button.btn-secondary {
+  padding: 0.5rem 1rem;
+}

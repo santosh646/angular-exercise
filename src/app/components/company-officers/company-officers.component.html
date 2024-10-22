@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <div class="header">
+    <h2>{{ companyName }}</h2>
+
+    <div class="button-group">
+      <button class="btn btn-secondary" (click)="searchAgain()">Search Again</button>
+      <button class="btn btn-danger" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="list-group">
+    <div>
+      Company Number: <strong>{{ companyNumber }}</strong>
+    </div>
+  </div>
+
+  <h3 class="mt-4">Officers</h3>
+  <div class="list-group">
+    <div *ngFor="let officer of officers">
+      <p><strong>{{ officer.name }}</strong> ({{ officer.officer_role }})</p>
+      <p>Appointed On: {{ officer.appointed_on | date }}</p>
+      <p *ngIf="officer.date_of_birth">Date of Birth: {{ officer.date_of_birth.year }}</p>
+    </div>
+  </div>
+</div>

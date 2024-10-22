@@ -1,0 +1,38 @@
+.container {
+  margin-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+button.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+  opacity: 0.9;
+}

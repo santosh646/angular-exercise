@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <div class="header">
+    <h2>{{ companyDetails.title }}</h2>
+
+    <div class="button-group">
+      <button class="btn btn-secondary" (click)="searchAgain()">Search Again</button>
+      <button class="btn btn-danger" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="list-group">
+    <div>
+      Company Number: <strong>{{ companyNumber }}</strong>
+    </div>
+  </div>
+    <div *ngIf="companyDetails.address">
+      <strong>Registered Office Address:</strong>
+      <div>{{ companyDetails.address_snippet || "" }}</div>
+    </div>
+
+    <div>
+      <strong>Company Status:</strong>
+      <div>{{ companyDetails.company_status }}</div>
+    </div>
+
+    <div>
+      <strong>Company Type:</strong>
+      <div>{{ companyDetails.company_type }}</div>
+    </div>
+
+    <div>
+      <strong>Incorporated On:</strong>
+      <div>{{ companyDetails.date_of_creation | date }}</div>
+    </div>
+
+    <div>
+      <a class="m-t-5" (click)="goToOfficers()">List Officers</a>
+    </div>
+  </div>

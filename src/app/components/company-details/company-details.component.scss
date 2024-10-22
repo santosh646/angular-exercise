@@ -1,0 +1,50 @@
+.container {
+  margin-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+button.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+button.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+button.btn:hover {
+  opacity: 0.9;
+}
+
+button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
